@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="./css/style.css">
+    
+    
+    
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  height:auto;
+  width: auto;
+  padding: 16px;
+  margin-top: -0px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}s
+</style>
+<body>
+
+    
+    
+    
+    <div class="main-wrapper">
+        <div class="nav-background">
+            <div class="mobile-logo">
+                <img src="./icons/logo.svg" alt="">
+            </div>
+            <div class="mobile-nav">
+                <div class="cart">
+                    <div class="flex items-center">
+                        <img src="./icons/cart-dark.svg" alt="">
+                        <a href="#">0 Items - (Rs=00.00)</a>
+                    </div>
+                </div>
+                <div class="nav-top">
+                    <ul>
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">About us</a>
+                        </li>
+                        <li>
+                            <a href="#">Products</a>
+                        </li>
+                        <li>
+                            <a href="#">Blog</a>
+                        </li>
+                        <li>
+                            <a href="#">Shop</a>
+                        </li>
+                        <li>
+                            <a href="#">Services</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact us</a>
+                        </li>
+                        <li>
+                            <a href="#">Log in</a>
+                        </li>
+                        <li>
+                            <a href="#">Register</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contact flex items-center">
+                    <img src="./icons/phone.svg" alt="">
+                    <div>
+                        <h5>Call us: (+84) 123 456 789</h5>
+                        <h6>E-mail : support@freshmeal.com</h6>
+                    </div>
+                </div>
+                <div class="time flex items-center">
+                    <img src="./icons/clock.svg" alt="">
+                    <div>
+                        <h5>Working Hours:</h5>
+                        <h6>Mon - Sat (8.00am - 12.00am)</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="site-content-wrapper">
+            <div class="nav-trigger">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-bar-chart">
+                    <line x1="12" y1="20" x2="12" y2="10" />
+                    <line x1="18" y1="20" x2="18" y2="4" />
+                    <line x1="6" y1="20" x2="6" y2="16" /></svg>
+            </div>
+            <div class="site-content">
+                <header class="topbar">
+                    <div class="container flex justify-between items-center">
+                        <div class="icons">
+                            <a href="#"><img src="./icons/facebook.svg" alt=""></a>
+                            <a href="#"><img src="./icons/twitter.svg" alt=""></a>
+                            <a href="#"><img src="./icons/google.svg" alt=""></a>
+                            <a href="#"><img src="./icons/instagram.svg" alt=""></a>
+                            <a href="#"><img src="./icons/search.svg" alt=""></a>
+                        </div>
+                        <div class="auth flex items-center">
+                            <div>
+                                <img src="./icons/user-icon.svg" alt="">
+                                <a href="#">Log in</a>
+                            </div>
+                            <span class="divider">|</span>
+                            <div>
+                                <img src="./icons/edit.svg" alt="">
+                                <a href="#">Register Now</a>
+                            </div>
+                            <span class="divider">|</span>
+                            <div>
+                                <img src="./icons/cart.svg" alt="">
+                                <a href="#">0 Items - (Rs=00.00)</a>
+                            </div>
+                        </div>
+                    </div> 
+                </header>
+
+                <nav>
+                    <div class="top">
+                        <div class="container flex justify-between">
+                            <div class="contact flex items-center">
+                                <img src="./icons/phone.svg" alt="">
+                                <div>
+                                    <h5>Call US: (+84) 123 456 789</h5>
+                                    <h6>E-mail : support@freshmeal.com</h6>
+                                </div>
+                            </div>
+                            <div class="branding">
+                                <img src="./icons/logo.svg" alt="">
+                            </div>
+                            <div class="time flex items-center">
+                                <img src="./icons/clock.svg" alt="">
+                                <div>
+                                    <h5>Working Hours:</h5>
+                                    <h6>Mon - Sat (8.00am - 12.00am)</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="navbar magic-shadow">
+                        <div class="container flex justify-center">
+                            <a href="index.html" class="active">Home</a>
+                            <a href="about us.html">About us</a>
+                            <a href="products.html">Products</a>
+                            <a href="blog.html">Blog</a>
+                            <a href="#">Shop</a>
+                            <a href="#">Services</a>
+                            <a href="gallery.html">Gallery</a>
+                            <a href="contact.html">Contact us</a>
+                        </div>
+                    </div>
+                </nav>
+
+    
+    
+    
+    
+    
+    
+    
+<h2 style="text-align:center ;background-color:yellow">Slideshow Gallery</h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="https://miro.medium.com/max/803/1*LjxCjwdsUlmdbO6UaHYBVw.png " style="width:100% ; height:350px">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src=" https://c4.wallpaperflare.com/wallpaper/444/570/539/food-india-indian-wallpaper-preview.jpg" style="width:100% ;height:350px">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="https://i.pinimg.com/originals/ce/cb/01/cecb013d9e66f27b2e6180b063697b59.jpg " style="width:100%;height:350px">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src=" https://d3m43grm1wrk85.cloudfront.net/photos/2020092509202116010220215643b379e3a7bc4b70e4c9832b114c01.jpg" style="width:100%;height: 350px">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="https://www.thewinebuzz.com/wp-content/uploads/2019/02/Spicy_Dal-800x600.jpg " style="width:100%;height:350px ">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src=" https://us.123rf.com/450wm/indianfoodimages/indianfoodimages1812/indianfoodimages181203973/113866656-paneer-do-pyaza-is-a-popular-punjabi-vegetarian-recipe-using-cubes-of-cottage-cheese-with-lots-of-on.jpg?ver=6" style="width:100%;height:350px">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="https://miro.medium.com/max/803/1*LjxCjwdsUlmdbO6UaHYBVw.png " style="width:100%;height:130px " onclick="currentSlide(1)" alt="Snacks">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src=" https://c4.wallpaperflare.com/wallpaper/444/570/539/food-india-indian-wallpaper-preview.jpg" style="width:100%;height:130px " onclick="currentSlide(2)" alt="Indian thali">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://i.pinimg.com/originals/ce/cb/01/cecb013d9e66f27b2e6180b063697b59.jpg " style="width:100%; height:130px" onclick="currentSlide(3)" alt="Indian dosa">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src=" https://d3m43grm1wrk85.cloudfront.net/photos/2020092509202116010220215643b379e3a7bc4b70e4c9832b114c01.jpg" style="width:100%;height:130px" onclick="currentSlide(4)" alt="Rice">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src=" https://www.thewinebuzz.com/wp-content/uploads/2019/02/Spicy_Dal-800x600.jpg" style="width:100%;height:130px" onclick="currentSlide(5)" alt="indian dal">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500 " style="width:120%;height:130px " onclick="currentSlide(6)" alt=" Pnaeer">
+    </div>
+  </div>
+  almsl
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="https://miro.medium.com/max/803/1*LjxCjwdsUlmdbO6UaHYBVw.png " style="width:100%;height:130px " onclick="currentSlide(1)" alt="Snacks">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src=" https://c4.wallpaperflare.com/wallpaper/444/570/539/food-india-indian-wallpaper-preview.jpg" style="width:100%;height:130px " onclick="currentSlide(2)" alt="Indian thali">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://i.pinimg.com/originals/ce/cb/01/cecb013d9e66f27b2e6180b063697b59.jpg " style="width:100%; height:130px" onclick="currentSlide(3)" alt="Indian dosa">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src=" https://d3m43grm1wrk85.cloudfront.net/photos/2020092509202116010220215643b379e3a7bc4b70e4c9832b114c01.jpg" style="width:100%;height:130px" onclick="currentSlide(4)" alt="Rice">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src=" https://www.thewinebuzz.com/wp-content/uploads/2019/02/Spicy_Dal-800x600.jpg" style="width:100%;height:130px" onclick="currentSlide(5)" alt="indian dal">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500 " style="width:120%;height:130px " onclick="currentSlide(6)" alt=" Pnaeer">
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+    
+</body>
+</html>
